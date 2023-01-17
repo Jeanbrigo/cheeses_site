@@ -1,12 +1,12 @@
-const URL = "https://people-api-o78q.onrender.com"
+const URL = "https://cheese-backendd.onrender.com"
 
-export const peopleLoader = async () => {
-  const response = await fetch(URL + "/people")
-  const people = await response.json()
-  return people
+export const cheesesLoader = async () => {
+  const response = await fetch(URL + "/cheeses")
+  const cheeses = await response.json()
+  return cheeses
 }
-export const personLoader = async ({params}) => {
-  const response = await fetch(URL + "/people/" + params.id )
-  const person = await response.json()
-  return person
+export const cheeseLoader = async ({params}) => {
+  const response = await fetch(URL + "/cheeses/" + params.id )
+  const cheese = await response.json()
+  return cheese
 }

@@ -1,23 +1,23 @@
 import { redirect } from "react-router-dom"
 
-const URL = "https://people-api-o78q.onrender.com"
+const URL = "https://cheese-backendd.onrender.com"
 
 export const createAction = async ({request}) => {
   // get data from form
   const formData = await request.formData()
   // set up our new person to match schema
-  const newPerson = {
+  const newCheese = {
       name: formData.get("name"),
       image: formData.get("image"),
-      title: formData.get("title")
+      type: formData.get("type")
   }
   // Send new person to our API
-  await fetch(URL + "/people", {
+  await fetch(URL + "/cheeses", {
       method: "post",
       headers: {
           "Content-Type":"application/json"
       },
-      body: JSON.stringify(newPerson)
+      body: JSON.stringify(newCheese)
   })
   // redirect to index
   return redirect("/")
@@ -27,18 +27,18 @@ export const updateAction = async ({request, params}) => {
   // get data from form
   const formData = await request.formData()
   // set up our new person to match schema
-  const updatedPerson = {
+  const updatedCheese = {
       name: formData.get("name"),
       image: formData.get("image"),
-      title: formData.get("title")
+      type: formData.get("type")
   }
   // Send new person to our API
-  await fetch(URL + "/people/" + params.id, {
+  await fetch(URL + "/cheeses/" + params.id, {
       method: "put",
       headers: {
           "Content-Type":"application/json"
       },
-      body: JSON.stringify(updatedPerson)
+      body: JSON.stringify(updatedCheese)
   })
   // redirect to index
   return redirect("/")
@@ -46,7 +46,7 @@ export const updateAction = async ({request, params}) => {
 
 export const deleteAction = async ({params}) => {
   // delete person with our API
-  await fetch(URL + "/people/" + params.id, {
+  await fetch(URL + "/cheeses/" + params.id, {
       method: "delete"
   })
   // redirect to index
