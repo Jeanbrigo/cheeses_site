@@ -1,8 +1,8 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: rgb(128, 128, 128);
+$contrastcolor: rgb(226, 208, 51);
 
 @mixin white-text-black-bg {
     color: $contrastcolor;
