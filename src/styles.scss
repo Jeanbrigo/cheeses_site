@@ -27,7 +27,7 @@ nav {
 }
 
 $imagesize: 300px;
-$cardpadding: 10px;
+$cardpadding: 15px;
 
 img{
     width: $imagesize;
@@ -42,7 +42,7 @@ img{
     grid-gap: 16px;
     justify-content: center;
     .card{
-        border: 1px black solid;
+        border: 4px orange solid;
         border-radius: 5px;
         padding: $cardpadding
     }
