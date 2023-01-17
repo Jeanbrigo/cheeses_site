@@ -1,7 +1,7 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: rgb(241, 157, 0);
+$maincolor: rgb(241, 129, 0);
 $contrastcolor: rgb(226, 208, 51);
 
 @mixin orange-text-yellow-bg {
@@ -18,7 +18,7 @@ nav {
     justify-content: flex-start;
 
     a {
-        @include orange-text-yellow-bg;
+       
 
         div{
             margin: 10px;
