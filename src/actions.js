@@ -5,13 +5,13 @@ const URL = "https://cheese-backendd.onrender.com"
 export const createAction = async ({request}) => {
   // get data from form
   const formData = await request.formData()
-  // set up our new person to match schema
+  // set up our new cheese to match schema
   const newCheese = {
       name: formData.get("name"),
       image: formData.get("image"),
       type: formData.get("type")
   }
-  // Send new person to our API
+  // Send new cheese to  API
   await fetch(URL + "/cheeses", {
       method: "post",
       headers: {
@@ -26,13 +26,13 @@ export const createAction = async ({request}) => {
 export const updateAction = async ({request, params}) => {
   // get data from form
   const formData = await request.formData()
-  // set up our new person to match schema
+  // set up our new cheese to match schema
   const updatedCheese = {
       name: formData.get("name"),
       image: formData.get("image"),
       type: formData.get("type")
   }
-  // Send new person to our API
+  // Send new cheese to API
   await fetch(URL + "/cheeses/" + params.id, {
       method: "put",
       headers: {
@@ -45,7 +45,7 @@ export const updateAction = async ({request, params}) => {
 }
 
 export const deleteAction = async ({params}) => {
-  // delete person with our API
+  // delete cheese from API
   await fetch(URL + "/cheeses/" + params.id, {
       method: "delete"
   })
