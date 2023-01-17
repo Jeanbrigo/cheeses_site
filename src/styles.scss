@@ -4,7 +4,7 @@
 $maincolor: rgb(241, 157, 0);
 $contrastcolor: rgb(226, 208, 51);
 
-@mixin white-text-black-bg {
+@mixin orange-text-yellow-bg {
     color: $contrastcolor;
     background-color: $maincolor;
 }
@@ -12,12 +12,13 @@ $contrastcolor: rgb(226, 208, 51);
 
 
 nav {
-    @include white-text-black-bg;
+    @include orange-text-yellow-bg;
+    background-color: $contrastcolor;
     display: flex;
     justify-content: flex-start;
 
     a {
-        @include white-text-black-bg;
+        @include orange-text-yellow-bg;
 
         div{
             margin: 10px;
@@ -54,7 +55,7 @@ div {
 }
 
 
-@mixin black-text-white-bg{
+@mixin orange-text-yellow-bg{
     color: $maincolor;
     background-color: $contrastcolor;
 }
@@ -63,14 +64,14 @@ section,
 div{
     form{
         input{
-            @include white-text-black-bg();
+            @include orange-text-yellow-bg();
             padding: 10px;
             font-size: 1.1em;
             margin: 10px;
 
 
             &[type="submit"]:hover{
-                @include black-text-white-bg()
+                @include orange-text-yellow-bg()
             }
         }
     }
