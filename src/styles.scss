@@ -37,6 +37,7 @@ img{
 }
 
 .container{
+    color: $maincolor;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(calc($imagesize + $cardpadding), max-content));
     grid-gap: 16px;
